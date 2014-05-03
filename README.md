@@ -1,9 +1,8 @@
-TIPE
-====
+Travail d'Initiative Personnelle Encadré
+========================================
 
 Description
 -----------
-**Travail d'Initiative Personnelle Encadré**
 
 | Thème | Problématique |
 | ----- | ------------- |
