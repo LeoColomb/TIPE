@@ -1,3 +1,14 @@
+############
+# TIPE
+############
+
+dist/
+node_modules
+
+############
+# LaTeX
+############
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

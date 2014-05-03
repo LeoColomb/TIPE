@@ -1,0 +1,121 @@
+%
+% Travail d'Initiative Personnelle Encadré
+% https://github.com/LeoColomb/TIPE
+% Copyright (c) 2014 Léo Colombaro
+% Licensed under MIT License
+%
+
+% -----------------
+% -- Définition  --
+% -----------------
+
+% Format du papier
+\documentclass[11pt,a4paper]{report}
+
+% Définissions de langue
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+
+\author{Léo Colombaro}
+\title{Devoir de Mathématiques}
+
+% -----------------
+% -- Paramétrage --
+% -----------------
+
+% Style Présentation
+\usepackage[pdfspacing]{classicthesis}
+\usepackage{lmodern}
+\usepackage{fourier}
+
+
+% Alinéa
+\setlength{\parindent}{0pt}
+
+% Marges
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=3cm]{geometry}
+
+
+
+% Définition des sections - sous-sections
+\titlespacing{\section} {5ex} {5ex} {2ex} {}
+\renewcommand*\thesection{\textbf{\arabic{section}}.}
+\titlespacing{\subsection} {10ex} {2ex} {1ex} {}
+\renewcommand\thesubsection{\alph{subsection}}
+
+% Chapitre sans saut de page
+\newcommand{\chapterspace}[1]{\begingroup
+  \let\clearpage\relax
+  \vspace{10em}
+  \chapter{#1}
+  \endgroup}
+
+% Modules URL & Code
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{moreverb}
+
+% -----------------
+% -- Maths       --
+% -----------------
+
+% Modules Mathématiques
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\newcommand*\E{\ensuremath{\textup{e}}\xspace}
+\usepackage{graphicx}
+
+% Ensembles
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% Intervalles
+\newcommand{\intval}[4]{\mathopen{#1}#2
+  \mathclose{}\mathpunct{};#3
+  \mathclose{#4}}
+\newcommand{\intvalff}[2]{\intval{[}{#1}{#2}{]}}
+\newcommand{\intvalof}[2]{\intval{]}{#1}{#2}{]}}
+\newcommand{\intvalfo}[2]{\intval{[}{#1}{#2}{[}}
+\newcommand{\intvaloo}[2]{\intval{]}{#1}{#2}{[}}
+
+% Valeur absolue - Normes
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norme}[1]{\left\lVert#1\right\rVert}
+
+% --------------
+% -- Document --
+% --------------
+
+% Page de garde
+\title{Travail d'Initiative Personnelle Encadré}
+\author{Léo \bsc{Colombaro}}
+\date{2013\space\textperiodcentered\space 2014}
+
+\begin{document}
+% Insertion page de garde
+\makeatletter
+  \begin{titlepage}
+  \centering
+      {\large \textsc{Classe Préparatoire aux Grandes Ecoles}}\\
+      \textsc{Ecole Nationnale de Physique Chimie Biologie de Paris}\\
+    \vfill
+      {\LARGE \@title} \\
+    \vspace{2em}
+      {---} \\
+    \vspace{2em}
+      {\large \@author} \\
+      {\@date} \\
+    \vfill
+      {\small Révision 0.0.1}
+  \end{titlepage}
+\makeatother
+
+%\input{part/1}
+
+\end{document}

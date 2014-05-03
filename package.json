@@ -1,0 +1,11 @@
+{
+  "name": "TIPE",
+  "description": "Travail d'Initiative Personnelle Encadré (Mathématiques, Physique et Informatique)",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "*",
+    "grunt-latex": "*"
+  }
+}
