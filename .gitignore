@@ -2,7 +2,6 @@
 # TIPE
 ############
 
-dist/
 node_modules
 
 ############
