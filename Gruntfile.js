@@ -10,12 +10,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
     latex: {
       options: {
-        haltOnError: 'true'
+        haltOnError: true
       },
-      pdf_target: {
+      pdf: {
         options: {
           outputDirectory: 'dist/',
-          jobname: 'TIPE'
+          jobname: 'TIPE',
+          bib: true
         },
         src: ['TIPE.tex']
       }
