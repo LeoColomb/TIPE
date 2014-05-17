@@ -9,22 +9,29 @@ module.exports = function (grunt) {
   // Project configuration
   grunt.initConfig({
     latex: {
-      options: {
-        haltOnError: true
-      },
       pdf: {
+        src: 'TIPE.tex',
         options: {
           outputDirectory: 'dist/',
-          jobname: 'TIPE',
-          bib: true
-        },
-        src: ['TIPE.tex']
+          jobname: 'TIPE'
+        }
+      },
+      bib: {
+        src: 'dist/TIPE.aux',
+        options: {
+          engine: 'bibtex',
+          interaction: false
+        }
       }
     },
     watch: {
       latex: {
         files: '**/*.tex',
-        tasks: ['latex']
+        tasks: ['latex:pdf', 'latex:bib', 'latex:pdf']
+      },
+      bibtex: {
+        files: '**/*.bib',
+        tasks: ['latex:bib', 'latex:pdf']
       }
     }
   });
