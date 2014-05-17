@@ -17,8 +17,10 @@
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
 
+% Métadata
+\title{La suite logistique et le chaos}
 \author{Léo Colombaro}
-\title{Devoir de Mathématiques}
+\date{2013\space\textperiodcentered\space 2014}
 
 % -----------------
 % -- Paramétrage --
@@ -28,16 +30,18 @@
 \usepackage[pdfspacing]{classicthesis}
 \usepackage{lmodern}
 \usepackage{fourier}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[toc]{glossaries}
 
 % Alinéa
 \setlength{\parindent}{0pt}
 
 % Marges
-\usepackage[left=3cm,right=3cm,top=2cm,bottom=3cm]{geometry}
+\usepackage[left=4cm,right=4cm,top=4cm,bottom=4cm]{geometry}
 
 % Définition des sections - sous-sections
 \titlespacing{\section} {5ex} {5ex} {2ex} {}
-\renewcommand*\thesection{\textbf{\arabic{section}}.}
+\renewcommand*\thesection{\arabic{section}}
 \titlespacing{\subsection} {10ex} {2ex} {1ex} {}
 \renewcommand\thesubsection{\alph{subsection}}
 
@@ -50,6 +54,8 @@
 
 % Modules URL & Code
 \usepackage{url}
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
 \usepackage{verbatim}
 \usepackage{moreverb}
 
@@ -63,7 +69,6 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \newcommand*\E{\ensuremath{\textup{e}}\xspace}
-\usepackage{graphicx}
 
 % Ensembles
 \newcommand{\N}{\mathbb{N}}
@@ -89,40 +94,18 @@
 % -- Document --
 % --------------
 
-\title{Travail d'Initiative Personnelle Encadré}
-\author{Léo \bsc{Colombaro}}
-\date{2013\space\textperiodcentered\space 2014}
-
 \begin{document}
-
-% Page de garde
-\makeatletter
-  \begin{titlepage}
-  \centering
-      {\large \textsc{Classe Préparatoire aux Grandes Ecoles}}\\
-      \textsc{Ecole Nationnale de Chimie Physique Biologie de Paris}\\
-    \vfill
-      {\LARGE \@title} \\
-    \vspace{2em}
-      {---} \\
-    \vspace{2em}
-      {\large \@author} \\
-      {\@date} \\
-    \vfill
-      {\small Révision 0.0.1}
-  \end{titlepage}
-\makeatother
-
-% Table des matières
-\tableofcontents
 
 % Contenu
 \input{src/0}
 \input{src/1}
 %\input{src/1}
 
+% Glossaire
+\makeglossaries
+
 % Bibliographie
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{../src/refs}
 
 \end{document}
