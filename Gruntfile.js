@@ -22,6 +22,13 @@ module.exports = function (grunt) {
           engine: 'bibtex',
           interaction: false
         }
+      },
+      glos: {
+        src: 'dist/TIPE.aux',
+        options: {
+          engine: 'makeglossaries',
+          interaction: false
+        }
       }
     },
     connect: {
@@ -34,7 +41,7 @@ module.exports = function (grunt) {
     watch: {
       latex: {
         files: '**/*.tex',
-        tasks: ['latex:pdf', 'latex:bib', 'latex:pdf']
+        tasks: ['latex', 'latex:pdf']
       },
       bibtex: {
         files: '**/*.bib',
