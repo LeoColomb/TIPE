@@ -12,7 +12,7 @@
 % Format du papier
 \documentclass[11pt,a4paper]{report}
 
-% Définissions de langue
+% Langue
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
@@ -22,24 +22,42 @@
 \author{Léo Colombaro}
 \date{2013\space\textperiodcentered\space 2014}
 
+% Modules primaires
+\usepackage{url} % URL
+\usepackage{hyperref} % Lien internes
+\usepackage{graphicx} % Images
+\usepackage{wrapfig} % Images intégrées
+\usepackage{verbatim} % Texte brut
+\usepackage{moreverb} % Encodage
+%\usepackage{quote} % Citations
+\usepackage{listings} % Syntaxe programme
+\usepackage{color} % Coloration
+
+% Outils Appendice
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[nomain,acronym,xindy,toc]{glossaries}
+\loadglsentries[main]{../src/glos}
+\makeglossaries
+\usepackage{makeidx}
+\makeindex
+
 % -----------------
-% -- Paramétrage --
+% -- Affichage   --
 % -----------------
 
-% Style Présentation
+% Présentation
 \usepackage[pdfspacing]{classicthesis}
 \usepackage{lmodern}
 \usepackage{fourier}
-\usepackage[nottoc,numbib]{tocbibind}
-\usepackage[toc]{glossaries}
 
 % Alinéa
-\setlength{\parindent}{0pt}
+%\setlength{\parindent}{0pt}
 
 % Marges
 \usepackage[left=4cm,right=4cm,top=4cm,bottom=4cm]{geometry}
 
-% Définition des sections - sous-sections
+% Sections
+\renewcommand\thechapter{\Roman{chapter}}
 \titlespacing{\section} {5ex} {5ex} {2ex} {}
 \renewcommand*\thesection{\arabic{section}}
 \titlespacing{\subsection} {10ex} {2ex} {1ex} {}
@@ -52,12 +70,11 @@
   \chapter{#1}
   \endgroup}
 
-% Modules URL & Code
-\usepackage{url}
-\usepackage{graphicx} % Required for including pictures
-\usepackage{wrapfig} % Allows in-line images
-\usepackage{verbatim}
-\usepackage{moreverb}
+% Table des matieres
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 % -----------------
 % -- Maths       --
@@ -86,7 +103,7 @@
 \newcommand{\intvalfo}[2]{\intval{[}{#1}{#2}{[}}
 \newcommand{\intvaloo}[2]{\intval{]}{#1}{#2}{[}}
 
-% Valeur absolue - Normes
+% Valeur absolue / Normes
 \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
 \newcommand{\norme}[1]{\left\lVert#1\right\rVert}
 
@@ -101,11 +118,16 @@
 \input{src/1}
 %\input{src/1}
 
-% Glossaire
-\makeglossaries
+\appendix
 
 % Bibliographie
 \bibliographystyle{unsrt}
 \bibliography{../src/refs}
+
+\printindex
+
+% Glossaire
+\setglossarystyle{altlist}
+\printglossary
 
 \end{document}
