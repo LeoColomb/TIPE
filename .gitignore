@@ -58,7 +58,7 @@ ref/
 *.acr
 *.glg
 *.glo
-*.gls
+*.gls*
 
 # hyperref
 *.brf
