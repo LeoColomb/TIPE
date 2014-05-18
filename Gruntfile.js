@@ -24,6 +24,13 @@ module.exports = function (grunt) {
         }
       }
     },
+    connect: {
+      server: {
+        options: {
+          hostname: 'localhost',
+        }
+      }
+    },
     watch: {
       latex: {
         files: '**/*.tex',
@@ -32,14 +39,21 @@ module.exports = function (grunt) {
       bibtex: {
         files: '**/*.bib',
         tasks: ['latex:bib', 'latex:pdf']
-      }
+      },
+      livereload: {
+        options: {
+          livereload: true
+        },
+        files: ['dist/TIPE.pdf'],
+      },
     }
   });
 
   // These plugins provide necessary tasks
   grunt.loadNpmTasks('grunt-latex');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['connect', 'watch']);
 };
