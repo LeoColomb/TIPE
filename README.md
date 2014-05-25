@@ -4,9 +4,9 @@ Travail d'Initiative Personnelle Encadré
 Description
 -----------
 
-| Thème | Problématique |
-| ----- | ------------- |
-| Les suites logistiques | Application numérique (à préciser) |
+| Sujet | Axes | Problématique |
+| ----- | ---- | ------------- |
+| Attraction pour fractales | Suite logistique, Attracteurs, Fractales | Création numérique de fractales organisées ou chaotiques |
 
 | Classe | Matières | Années | Auteur |
 | ------ | -------- | ------ | ------ |

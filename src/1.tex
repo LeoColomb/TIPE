@@ -7,17 +7,50 @@
 
 \chapter{Suite logistique}
 \section{Définition et notions préliminaires}
+\subsection{Introduction}
+On s'aperçoit rapidement de la diversité des utilisations possibles
+de la suite logistique. L'origine de l'étude des systèmes dynamique est 
+motivé par ces applications concrètes qui permettent d'expliquer des
+mécanisme naturels. C'est ainsi que nous le rappelle Daniel \cite{Perrin}.
+\begin{quotation}
+Le type même de problèmes qui est à l'origine de la théorie des systèmes
+dynamiques est celui de l'évolution d'une population en fonction du temps.
+Le mot population est à prendre ici en un sens très large. Il peut aussi bien
+s'agir d'une population humaine, qu'animale, des victimes d'une épidémie,
+d'un ensemble de molécules, de particules, etc. Les modèles dont je vais parler
+sont des modèles déterministes. Cela signifie qu'ils sont régis par une loi
+bien déterminée, qui doit permettre, en théorie, de décrire leur évolution à
+partir d'un état initial connu. On sait depuis Poincaré que, malgré cette 
+hypothèse restrictive, le comportement de ces modèles peut être excessivement
+compliqué, en particulier à cause de la sensibilité du système aux conditions
+initiales.
+\end{quotation}
+L'importance des conditions initiales est en effet immense, puisque le
+comportement y est déterminé.\\
+Nous nous proposons donc dans cette première partie d'étudier l'influence
+des conditions initiales sur la suite logistique, pour comprendre l'intérêt
+applicatif de cette suite.
+
+\subsection{Principe}
+\subsubsection{Modèle continu}
+
+\subsubsection{Modèle discret}
+Tout d'abord, il convient de définir précisément la suite logistique et les
+objets qui la composent.\\
+Nommons-la $(x_n)_{n\in \N}$. On donne l'expression par récurrence :
+\begin{Large}
+\begin{align*}
+x_{n+1} = \mu x_n(1 - x_n)
+\end{align}
+\end{Large}
+avec $\mu $ un réel positif, nommé, et $ x_{0} $ le premier terme de la liste.
 \section{Théorèmes fondamentaux}
 \section{Étude comportementale}
+\subsection{Cas $0 < \mu < 1$}
+\subsection{Cas $\mu = 1$}
+\subsection{Cas $1 < \mu < 2$}
+\subsection{Cas $\mu = 2$}
+\subsection{Cas $2 < \mu < 3$}
+\subsection{Cas $\mu = 3$}
 \section{Application}
 
-\cite{Perrin}
-\cite{Attract}
-
-\newglossaryentry{computer}
-{
-  name=computer,
-  description={is a programmable machine that receives input,
-               stores and manipulates data, and provides
-               output in a useful format}
-}
