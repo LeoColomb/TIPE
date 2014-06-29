@@ -18,7 +18,7 @@
 \usepackage[T1]{fontenc}
 
 % Métadata
-\title{Attraction pour fractales}
+\title{Fractales attractives}
 \author{Léo Colombaro}
 \date{2013\space\textperiodcentered\space 2014}
 
@@ -33,14 +33,6 @@
 \usepackage{listings} % Syntaxe programme
 \usepackage{color} % Coloration
 
-% Outils Appendice
-\usepackage[nottoc,numbib]{tocbibind}
-\usepackage[nomain,acronym,xindy,toc]{glossaries}
-\loadglsentries[main]{../src/glos}
-\makeglossaries
-\usepackage{makeidx}
-\makeindex
-
 % -----------------
 % -- Affichage   --
 % -----------------
@@ -51,10 +43,10 @@
 \usepackage{fourier}
 
 % Alinéa
-%\setlength{\parindent}{0pt}
+\setlength{\parindent}{pt}
 
 % Marges
-\usepackage[left=4cm,right=4cm,top=4cm,bottom=4cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 
 % Sections
 %\renewcommand\thechapter{\Roman{chapter}}
@@ -66,7 +58,7 @@
 % Chapitre sans saut de page
 \newcommand{\chapterspace}[1]{\begingroup
   \let\clearpage\relax
-  \vspace{10em}
+  \vspace{1em}
   \chapter{#1}
   \endgroup}
 
@@ -119,17 +111,16 @@
 \input{src/1}
 \input{src/2}
 \input{src/3}
+\input{src/4}
 
 \appendix
 
-% Bibliographie
-\bibliographystyle{unsrtnat}
-\bibliography{../src/refs}
 
-\printindex
+
+%\printindex
 
 % Glossaire
-\setglossarystyle{altlist}
-\printglossary
+%\setglossarystyle{altlist}
+%\printglossary
 
 \end{document}
